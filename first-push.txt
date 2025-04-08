@@ -1,0 +1,2 @@
+first push text filprint
+print " Hola desde VIM")
