@@ -1,0 +1,7 @@
+#Instalar con:
+#pip install -r requirements.txt
+pandas
+openpyxl
+matplotlib
+plotly
+streamlit

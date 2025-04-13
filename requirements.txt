@@ -1,0 +1,2 @@
+# Agrega tus dependencias aquí
+requests
