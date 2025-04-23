@@ -23,7 +23,7 @@ def saludar(nombre, sexo):
 
 saludar("claudia","mujer")    
 
-#crear funcion que retorna vLORES( UNA CLAVE)
+#crear funcion que retorna VALORES( UNA CLAVE)
 def crear_contraseña_random(num):
     chars = "abcdefghij"
     num_entero = str(num)
@@ -36,5 +36,5 @@ def crear_contraseña_random(num):
    
     
 pasword = crear_contraseña_random(1)
-frase = f"La Contraseña resultante es : {password}
+frase = f"La Contraseña resultante es : {password}"
 print(frase)    

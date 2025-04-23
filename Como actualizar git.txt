@@ -1,0 +1,14 @@
+🛠️ OPCIONES RECOMENDADAS EN WINDOWS:
+🟩 Opción 1: Git Bash (más cómodo para Git)
+Abra el Explorador de archivos.
+
+Vaya a: C:\Users\PC\Documents\mi_proyecto_python
+
+Haga clic derecho sobre un espacio vacío dentro de la carpeta.
+
+Seleccione "Git Bash Here" (si tiene Git instalado).
+
+Se abre una consola. Ahí puede escribir:
+git add .
+git commit -m "Descripción clara de lo que cambió"
+git push

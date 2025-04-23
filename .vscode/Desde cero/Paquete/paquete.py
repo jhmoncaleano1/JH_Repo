@@ -1,0 +1,1 @@
+#paquete en un grupo de modulos pero debe tener un __init__.py
