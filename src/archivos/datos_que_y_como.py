@@ -1,6 +1,6 @@
 import csv
 
-with open("archivos\\datos.csv") as df:
+with open("data\\datos.csv") as df:
     reader = csv.reader(df)
     for row in reader:
         print(row)

@@ -12,7 +12,7 @@ plt.style.use('ggplot')
 sns.set(style="whitegrid")
 
 # Crear conexión a base de datos SQLite (opcional pero útil para persistencia)
-conn = sqlite3.connect("ventas_analisis.db")
+conn = sqlite3.connect("data\\ventas_analisis.db")
 cursor = conn.cursor()
 
 # Crear las tablas necesarias si no existen
@@ -70,10 +70,10 @@ class ModeloAnalisisVentas:
     def cargar_desde_excel(self, ruta_clientes, ruta_facturas, ruta_pagos, ruta_rango_edad):
         """Carga datos desde archivos Excel"""
         # Carga de datos
-        self.clientes_df = pd.read_csv(ruta_clientes, sep=';')
-        self.facturas_df = pd.read_csv(ruta_facturas, sep=';')
-        self.pagos_df = pd.read_csv(ruta_pagos, sep=';')
-        self.rango_edad_df = pd.read_csv(ruta_rango_edad, sep=';')
+        self.clientes_df = pd.read_excel(ruta_clientes)
+        self.facturas_df = pd.read_excel(ruta_facturas)
+        self.pagos_df = pd.read_excel(ruta_pagos)
+        self.rango_edad_df = pd.read_excel(ruta_rango_edad, encoding='latin1')
         
         # Limpieza y conversión de datos
         self.limpiar_datos()
@@ -468,7 +468,7 @@ def ejecutar_modelo(ruta_clientes, ruta_facturas, ruta_pagos, ruta_rango_edad, r
 # Ejemplo de uso
 if __name__ == "__main__":
     # Definir rutas de archivos
-    ruta_clientes = "Clientess.xlsx"
+    ruta_clientes = "data\\Clientess.xlsx"
     ruta_facturas = "Facturas.xlsx"
     ruta_pagos = "Facturas Pagos.xlsx"
     ruta_rango_edad = "Rango Edad.xlsx"

@@ -11,5 +11,8 @@ def fibonacci(num):
 #resultado llama la funcion fibonacci con el parametro 34
 resultado = fibonacci(34)
 print(f"los numeros de la serie son : {resultado}")
+
+
+
        
       
