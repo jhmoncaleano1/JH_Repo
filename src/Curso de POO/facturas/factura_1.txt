@@ -1,0 +1,9 @@
+FACTURA #1
+Fecha: 2025-04-30 09:07:06
+Hola, soy Jorge. / Cliente ID: C123 / Empleado ID: E456
+------------------------
+Laptop x1 = $4500.00
+Mouse x2 = $300.00
+Teclado x1 = $300.00
+------------------------
+TOTAL: $5100.00
