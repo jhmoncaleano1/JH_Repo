@@ -27,3 +27,13 @@ if "Nombre" in df.columns and "Salario" in df.columns:
     plt.show()
 else:
     print("⚠️ Las columnas 'Nombre' y 'Salario' no están disponibles en el archivo.")
+# 1. main.py: punto de entrada
+# src/main.py
+from modelo_ventas import SistemaVentas
+
+if __name__ == "__main__":
+    sistema = SistemaVentas()
+    sistema.cargar_datos("data/clientes.xlsx", "data/productos.xlsx")
+    sistema.generar_factura("Juan Perez", [(101, 2), (103, 1)])  # (ID producto, cantidad)
+    sistema.guardar_factura_txt("outputs/factura_juan.txt")
+    sistema.listar_facturas()

@@ -55,6 +55,15 @@ cursor.execute('''
         orden INTEGER
     )
 ''')
+cursor.execute('''
+     CREATE TABLE IF NOT EXISTS rango_edad (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        min INTEGER,
+        max INTEGER,
+        edad TEXT,
+        orden INTEGER
+    )
+''')
 
 conn.commit()
 
@@ -73,7 +82,7 @@ class ModeloAnalisisVentas:
         self.clientes_df = pd.read_excel(ruta_clientes)
         self.facturas_df = pd.read_excel(ruta_facturas)
         self.pagos_df = pd.read_excel(ruta_pagos)
-        self.rango_edad_df = pd.read_excel(ruta_rango_edad, encoding='latin1')
+        self.rango_edad_df = pd.read_excel(ruta_rango_edad)
         
         # Limpieza y conversión de datos
         self.limpiar_datos()
@@ -469,9 +478,9 @@ def ejecutar_modelo(ruta_clientes, ruta_facturas, ruta_pagos, ruta_rango_edad, r
 if __name__ == "__main__":
     # Definir rutas de archivos
     ruta_clientes = "data\\Clientess.xlsx"
-    ruta_facturas = "Facturas.xlsx"
-    ruta_pagos = "Facturas Pagos.xlsx"
-    ruta_rango_edad = "Rango Edad.xlsx"
+    ruta_facturas = "data\\Facturas.xlsx"
+    ruta_pagos = "data\\Facturas Pagos.xlsx"
+    ruta_rango_edad = "data\\Rango Edad.xlsx"
     
     # Ejecutar modelo
     resultados = ejecutar_modelo(
